@@ -13,14 +13,14 @@ typedef struct {
     int topo;
 } PilhaChar;
 
-// Funções Pilha (double)
+// funções da pilha (double)
 void inicializarPilha(Pilha *p);
 int pilhaVazia(Pilha *p);
 void empilhar(Pilha *p, double valor);
 double desempilhar(Pilha *p);
 double topoPilha(Pilha *p);
 
-// Funções Pilha (char)
+// funções da pilha (char)
 void inicializarPilhaChar(PilhaChar *p);
 int pilhaCharVazia(PilhaChar *p);
 void empilharChar(PilhaChar *p, char c);
@@ -28,3 +28,4 @@ char desempilharChar(PilhaChar *p);
 char topoPilhaChar(PilhaChar *p);
 
 #endif
+
