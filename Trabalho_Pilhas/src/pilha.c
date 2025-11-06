@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "pilha.h"
 
-// Pilha (double)
+// pilha (double)
 void inicializarPilha(Pilha *p) { p->topo = -1; }
 int pilhaVazia(Pilha *p) { return p->topo == -1; }
 void empilhar(Pilha *p, double valor) { p->itens[++p->topo] = valor; }
@@ -12,7 +12,7 @@ double desempilhar(Pilha *p) {
 }
 double topoPilha(Pilha *p) { return pilhaVazia(p) ? 0 : p->itens[p->topo]; }
 
-// Pilha (char)
+// pilha (char)
 void inicializarPilhaChar(PilhaChar *p) { p->topo = -1; }
 int pilhaCharVazia(PilhaChar *p) { return p->topo == -1; }
 void empilharChar(PilhaChar *p, char c) { p->itens[++p->topo] = c; }
@@ -21,3 +21,4 @@ char desempilharChar(PilhaChar *p) {
     return p->itens[p->topo--];
 }
 char topoPilhaChar(PilhaChar *p) { return pilhaCharVazia(p) ? '\0' : p->itens[p->topo]; }
+
