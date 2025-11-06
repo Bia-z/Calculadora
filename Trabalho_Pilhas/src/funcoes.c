@@ -5,7 +5,7 @@
 #include <math.h>
 #include "funcoes.h"
 
-// Funções auxiliares
+// funções auxiliares
 int prioridade(char op) {
     switch (op) {
         case '^': return 4;
@@ -21,7 +21,7 @@ int ehOperador(char c) {
     return (c == '+' || c == '-' || c == '*' || c == '/' || c == '^');
 }
 
-// Tokenização (com tratamento de unário)
+// tokenização (com tratamento de unário)
 void quebrarExpressao(char *expr, Fila *entrada) {
     char token[50];
     int i = 0, j;
@@ -62,7 +62,7 @@ void quebrarExpressao(char *expr, Fila *entrada) {
     }
 }
 
-// Infixa -> Pós-fixa
+// infixa para pós-fixa
 void converterPosfixa(Fila *entrada, Fila *saida) {
     PilhaChar operadores;
     inicializarPilhaChar(&operadores);
@@ -105,7 +105,7 @@ void converterPosfixa(Fila *entrada, Fila *saida) {
     }
 }
 
-// Avaliar Pós-fixa
+// avaliar pós-fixa
 double avaliarPosfixa(Fila *posfixa) {
     Pilha valores;
     inicializarPilha(&valores);
@@ -134,3 +134,4 @@ double avaliarPosfixa(Fila *posfixa) {
     if (pilhaVazia(&valores)) { printf("Erro: nada para retornar.\n"); exit(1); }
     return desempilhar(&valores);
 }
+
