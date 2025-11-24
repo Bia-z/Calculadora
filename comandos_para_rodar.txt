@@ -1,0 +1,3 @@
+//gcc -I include main/main.c src/funcoes.c src/pilha.c src/fila.c -o calculadora
+
+//.\calculadora.exe
